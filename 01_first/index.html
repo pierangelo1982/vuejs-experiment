@@ -76,6 +76,35 @@
                 </ol>
             </div>
 
+            <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <hr>
+            </div>
+
+            <!-- otto - reverse message -->
+            <div id="app8" class="col col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <h3>{{message}}</h3>
+                <button v-on:click="reverseMessage">Reverse Message</button>
+            </div>
+
+            <!-- otto - message react at input form  -->
+            <div id="app9" class="col col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <h3>{{message}}</h3>
+                <input v-model="message" />
+            </div>
+
+            <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <hr>
+            </div>
+
+            <!-- dieci - calcola -->
+            <div id="app10" class="col col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <h3>{{totale}}</h3>
+                <input v-model="valore" /> + <input v-model="valoredue">
+                <button v-on:click="calculateTotal">CALCOLA</button>
+            </div>
+
+
+
 
         </div><!-- /row -->
     </div><!-- container -->

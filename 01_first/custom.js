@@ -67,3 +67,39 @@ var app7 = new Vue({
         ]
     }
 });
+
+// otto - reverse message
+var app8 = new Vue({
+    el: '#app8',
+    data: {
+        message: 'Hello Vue.JS'
+    },
+    methods: {
+        reverseMessage: function() {
+            this.message = this.message.split('').reverse().join('')
+        }
+    }
+});
+
+// nove input model
+var app9 = new Vue({
+    el: '#app9',
+    data: {
+        message: 'scrivi qualcosa nel form'
+    }
+});
+
+// dieci nome cognome
+var app10 = new Vue({
+    el: '#app10',
+    data: {
+        valore: 0,
+        valoredue: 0,
+        totale: 0
+    },
+    methods: {
+        calculateTotal: function() {
+            this.totale = parseInt(this.valore) + parseInt(this.valoredue)
+        }
+    }
+});
