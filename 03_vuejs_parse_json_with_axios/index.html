@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Vue.JS | Using Axios to Consume APIs</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+
+            <div id="app" class="col col-xl-12">
+                <!-- entire json -->
+                <p>{{info}}</p>
+                <p><hr></p>
+                <!-- parse singole item -->
+                <p>{{info.data.disclaimer}}</p>
+            </div>
+
+        </div><!-- /row -->
+    </div><!-- container -->
+
+<!-- my custom.js with vue command -->
+<script src="custom.js"></script>
+
+</body>
+</html>
