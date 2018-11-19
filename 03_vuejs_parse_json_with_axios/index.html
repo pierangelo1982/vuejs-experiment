@@ -24,6 +24,42 @@
                 <p>{{info.data.disclaimer}}</p>
             </div>
 
+            <div class="col col-xl-12"><hr></div>
+            
+            <!-- only data inside bpi -->
+            <div id="app-2" class="col col-xl-12">
+                {{info}}
+            </div>
+
+            <div class="col col-xl-12"><hr></div>
+
+            <!--loop currency -->
+            <div id="app-3" class="col col-xl-6">
+                <h1>Bitcoin Price Index</h1>
+                <div
+                    v-for="currency in info"
+                    class="currency">
+                    {{ currency.description }}:
+                    <span class="lighten">
+                    <span v-html="currency.symbol"></span>{{ currency.rate_float | currencydecimal }}
+                    </span>
+                </div>
+            </div>
+
+            <!-- error handling -->
+            <div id="app-4" class="col col-xl-6">
+                <h1>Bitcoin Price Index</h1>
+                <div
+                    v-for="currency in info"
+                    class="currency">
+                    {{ currency.description }}:
+                    <span class="lighten">
+                    <span v-html="currency.symbol"></span>{{ currency.rate_float | currencydecimal }}
+                    </span>
+                </div>
+            </div>
+
+
         </div><!-- /row -->
     </div><!-- container -->
 
