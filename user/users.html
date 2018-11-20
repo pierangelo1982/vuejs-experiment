@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- development version, includes helpful console warnings -->
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Vue.JS | User registration</title>
+  </head>
+  <body>
+    <div id="list" class="container">
+        <div class="row">
+            <h3>Utenti</h3>
+            <p><hr></p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">username</th>
+                        <th scope="col">password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="user in users">
+                        <th scope="row">{{user._id}}</th>
+                        <td>{{user.email}}</td>
+                        <td>{{user.password}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><hr></p>
+            <p class="text-right">Totale: {{totale}}</p>
+        </div><!-- /row -->
+    </div><!-- container -->
+
+<!-- my custom.js with vue command -->
+<script src="custom.js"></script>
+
+</body>
+</html>
