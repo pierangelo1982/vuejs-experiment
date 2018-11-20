@@ -17,12 +17,14 @@
         <div class="row">
             <h3>Utenti</h3>
             <p><hr></p>
+            <div class="primary" v-if="deleted">Primary Alert</div>
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">username</th>
                         <th scope="col">password</th>
+                        <th>cancella</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +32,7 @@
                         <th scope="row">{{user._id}}</th>
                         <td>{{user.email}}</td>
                         <td>{{user.password}}</td>
+                        <td><button v-on:click="deleteUser(user._id)">Cancella</button></td>
                     </tr>
                 </tbody>
             </table>
