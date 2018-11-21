@@ -41,10 +41,10 @@ var appusers = new Vue({
             },
             // cancella utente
             deleteUser: function(userID) {
-                console.log("cliccato")
                 axios.delete('http://127.0.0.1:3000/api/delete/' + userID)
                     .then(response => {
                         console.log(response.data.message)
+                        this.message = response.data.message,
                         // refresho lista dopo cancellazione
                         this.userList()
                 })
